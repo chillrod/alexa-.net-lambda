@@ -1,0 +1,9 @@
+﻿{
+  "profiles": {
+    "AbrirMedicoes": {
+      "commandName": "Project",
+      "commandLineArgs": "--port 7298",
+      "launchBrowser": false
+    }
+  }
+}
