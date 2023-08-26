@@ -39,7 +39,7 @@ namespace AbrirMedicoes.Intents
                     };
 
 
-                    Commands.AlexaResponse.Responder(res);
+                    response = Commands.AlexaResponse.Responder(res);
 
                 }
             }

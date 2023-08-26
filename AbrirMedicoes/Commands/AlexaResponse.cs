@@ -13,12 +13,11 @@ namespace AbrirMedicoes.Types
 namespace AbrirMedicoes.Commands
 {
 
-	
-
 	public class AlexaResponse {
-		public static void Responder(Types.IAlexaResponse response)
+
+		public static Alexa.NET.Response.SkillResponse Responder(Types.IAlexaResponse response)
         {
-			ResponseBuilder.Tell(response.Text);
+			return ResponseBuilder.Tell(response.Text);
         }
 		
 	}
