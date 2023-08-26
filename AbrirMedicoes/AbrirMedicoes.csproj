@@ -11,6 +11,7 @@
   <ItemGroup>
     <None Remove="Intents\" />
     <None Remove="Requests\" />
+    <None Remove="Utils\" />
   </ItemGroup>
   <ItemGroup>
     <None Update="host.json">
@@ -24,5 +25,6 @@
   <ItemGroup>
     <Folder Include="Intents\" />
     <Folder Include="Requests\" />
+    <Folder Include="Utils\" />
   </ItemGroup>
 </Project>
