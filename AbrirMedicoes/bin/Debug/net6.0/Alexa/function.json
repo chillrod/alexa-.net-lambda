@@ -13,5 +13,5 @@
   ],
   "disabled": false,
   "scriptFile": "../bin/AbrirMedicoes.dll",
-  "entryPoint": "AbrirMedicoes.AbrirMedicoes.Run"
+  "entryPoint": "AlexaSkill.AlexaSkill.Run"
 }

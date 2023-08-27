@@ -6,7 +6,7 @@ using Alexa.NET.Response;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace AbrirMedicoes.Intents
+namespace AbrirMedicoes.Commands.Intents
 {
     public class Weather
     {
@@ -20,10 +20,9 @@ namespace AbrirMedicoes.Intents
     {
 
 
-        public static async Task<SkillResponse> CarregarFeed(SkillRequest skillRequest, Type requestType, SkillResponse response)
+        public static async Task<SkillResponse> CarregarFeed(SkillRequest skillRequest, SkillResponse response)
         {
           
-            if (requestType == typeof(IntentRequest))
             {
                 var intentRequest = skillRequest.Request as IntentRequest;
 
@@ -39,7 +38,7 @@ namespace AbrirMedicoes.Intents
                     };
 
 
-                    response = Commands.AlexaResponse.Responder(res);
+                    response = AlexaResponse.Responder(res);
 
                 }
             }

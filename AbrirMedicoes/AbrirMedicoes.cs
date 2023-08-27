@@ -3,21 +3,20 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Azure.WebJobs;
 using Microsoft.Azure.WebJobs.Extensions.Http;
 using Microsoft.AspNetCore.Http;
-using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
-using AbrirMedicoes.Intents;
+using AbrirMedicoes.Commands.Intents;
+using AbrirMedicoes.Commands.Requests;
 using Alexa.NET.Request;
 using Alexa.NET.Response;
+using Alexa.NET.Request.Type;
 
-
-namespace AbrirMedicoes
+namespace AlexaSkill
 {
-    public static class AbrirMedicoes
+    public static class AlexaSkill
     {
         [FunctionName("Alexa")]
         public static async Task<IActionResult> Run(
-[HttpTrigger(AuthorizationLevel.Function, "post", Route = null)] HttpRequest req,
-ILogger log)
+[HttpTrigger(AuthorizationLevel.Function, "post", Route = null)] HttpRequest req)
         {
             string json = await req.ReadAsStringAsync();
             var skillRequest = JsonConvert.DeserializeObject<SkillRequest>(json);
@@ -26,10 +25,25 @@ ILogger log)
 
             SkillResponse response = null;
 
+            try
+            {
+                response = AbrirMedicoes.Services.Auth.Auth.IdentificarUsuario(response);
 
-            response = Requests.Launch.AbrirInventário(requestType, response);
+                response = Launch.AbrirInventário(requestType, response);
 
-            response = await Medicoes.CarregarFeed(skillRequest, requestType, response);
+                if (requestType == typeof(IntentRequest))
+                {
+                    response = await Medicoes.CarregarFeed(skillRequest, response);
+
+                }
+
+            }
+            catch
+            {
+                response.Response.ShouldEndSession = true;
+
+            }
+
 
             return new OkObjectResult(response);
         }

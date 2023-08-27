@@ -7,11 +7,16 @@
     <PackageReference Include="Microsoft.NET.Sdk.Functions" Version="4.2.0" />
     <PackageReference Include="Alexa.NET" Version="1.22.0" />
     <PackageReference Include="Microsoft.SyndicationFeed.ReaderWriter" Version="1.0.2" />
+    <PackageReference Include="Alexa.NET.Settings" Version="1.1.0" />
+    <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="6.32.2" />
+    <PackageReference Include="Microsoft.IdentityModel.Tokens" Version="6.32.2" />
   </ItemGroup>
   <ItemGroup>
-    <None Remove="Intents\" />
-    <None Remove="Requests\" />
     <None Remove="Utils\" />
+    <None Remove="Services\" />
+    <None Remove="Services\Auth\" />
+    <None Remove="Commands\Requests\" />
+    <None Remove="Commands\Intents\" />
   </ItemGroup>
   <ItemGroup>
     <None Update="host.json">
@@ -23,8 +28,10 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Intents\" />
-    <Folder Include="Requests\" />
     <Folder Include="Utils\" />
+    <Folder Include="Services\" />
+    <Folder Include="Services\Auth\" />
+    <Folder Include="Commands\Requests\" />
+    <Folder Include="Commands\Intents\" />
   </ItemGroup>
 </Project>

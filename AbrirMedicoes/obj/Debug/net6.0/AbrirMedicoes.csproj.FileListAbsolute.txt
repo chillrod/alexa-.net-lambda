@@ -68,3 +68,9 @@
 /Users/rod/Projects/AbrirMedicoes/AbrirMedicoes/obj/Debug/net6.0/refint/AbrirMedicoes.dll
 /Users/rod/Projects/AbrirMedicoes/AbrirMedicoes/obj/Debug/net6.0/AbrirMedicoes.pdb
 /Users/rod/Projects/AbrirMedicoes/AbrirMedicoes/obj/Debug/net6.0/ref/AbrirMedicoes.dll
+/Users/rod/Projects/AbrirMedicoes/AbrirMedicoes/bin/Debug/net6.0/Alexa.NET.Settings.dll
+/Users/rod/Projects/AbrirMedicoes/AbrirMedicoes/bin/Debug/net6.0/Microsoft.IdentityModel.Abstractions.dll
+/Users/rod/Projects/AbrirMedicoes/AbrirMedicoes/bin/Debug/net6.0/Microsoft.IdentityModel.JsonWebTokens.dll
+/Users/rod/Projects/AbrirMedicoes/AbrirMedicoes/bin/Debug/net6.0/Microsoft.IdentityModel.Logging.dll
+/Users/rod/Projects/AbrirMedicoes/AbrirMedicoes/bin/Debug/net6.0/Microsoft.IdentityModel.Tokens.dll
+/Users/rod/Projects/AbrirMedicoes/AbrirMedicoes/bin/Debug/net6.0/System.IdentityModel.Tokens.Jwt.dll

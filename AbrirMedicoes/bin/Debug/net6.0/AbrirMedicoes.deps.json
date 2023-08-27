@@ -9,8 +9,11 @@
       "AbrirMedicoes/1.0.0": {
         "dependencies": {
           "Alexa.NET": "1.22.0",
+          "Alexa.NET.Settings": "1.1.0",
+          "Microsoft.IdentityModel.Tokens": "6.32.2",
           "Microsoft.NET.Sdk.Functions": "4.2.0",
-          "Microsoft.SyndicationFeed.ReaderWriter": "1.0.2"
+          "Microsoft.SyndicationFeed.ReaderWriter": "1.0.2",
+          "System.IdentityModel.Tokens.Jwt": "6.32.2"
         },
         "runtime": {
           "AbrirMedicoes.dll": {}
@@ -24,6 +27,17 @@
           "lib/netstandard2.0/Alexa.NET.dll": {
             "assemblyVersion": "1.22.0.0",
             "fileVersion": "1.22.0.0"
+          }
+        }
+      },
+      "Alexa.NET.Settings/1.1.0": {
+        "dependencies": {
+          "Alexa.NET": "1.22.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Alexa.NET.Settings.dll": {
+            "assemblyVersion": "1.1.0.0",
+            "fileVersion": "1.1.0.0"
           }
         }
       },
@@ -132,7 +146,7 @@
       "Microsoft.AspNetCore.Http.Abstractions/2.2.0": {
         "dependencies": {
           "Microsoft.AspNetCore.Http.Features": "2.2.0",
-          "System.Text.Encodings.Web": "4.5.0"
+          "System.Text.Encodings.Web": "4.7.2"
         },
         "runtime": {
           "lib/netstandard2.0/Microsoft.AspNetCore.Http.Abstractions.dll": {
@@ -281,7 +295,7 @@
       "Microsoft.AspNetCore.WebUtilities/2.2.0": {
         "dependencies": {
           "Microsoft.Net.Http.Headers": "2.2.0",
-          "System.Text.Encodings.Web": "4.5.0"
+          "System.Text.Encodings.Web": "4.7.2"
         },
         "runtime": {
           "lib/netstandard2.0/Microsoft.AspNetCore.WebUtilities.dll": {
@@ -634,6 +648,52 @@
           }
         }
       },
+      "Microsoft.IdentityModel.Abstractions/6.32.2": {
+        "runtime": {
+          "lib/net6.0/Microsoft.IdentityModel.Abstractions.dll": {
+            "assemblyVersion": "6.32.2.0",
+            "fileVersion": "6.32.2.40825"
+          }
+        }
+      },
+      "Microsoft.IdentityModel.JsonWebTokens/6.32.2": {
+        "dependencies": {
+          "Microsoft.IdentityModel.Tokens": "6.32.2",
+          "System.Text.Encoding": "4.3.0",
+          "System.Text.Encodings.Web": "4.7.2",
+          "System.Text.Json": "4.7.2"
+        },
+        "runtime": {
+          "lib/net6.0/Microsoft.IdentityModel.JsonWebTokens.dll": {
+            "assemblyVersion": "6.32.2.0",
+            "fileVersion": "6.32.2.40825"
+          }
+        }
+      },
+      "Microsoft.IdentityModel.Logging/6.32.2": {
+        "dependencies": {
+          "Microsoft.IdentityModel.Abstractions": "6.32.2"
+        },
+        "runtime": {
+          "lib/net6.0/Microsoft.IdentityModel.Logging.dll": {
+            "assemblyVersion": "6.32.2.0",
+            "fileVersion": "6.32.2.40825"
+          }
+        }
+      },
+      "Microsoft.IdentityModel.Tokens/6.32.2": {
+        "dependencies": {
+          "Microsoft.CSharp": "4.5.0",
+          "Microsoft.IdentityModel.Logging": "6.32.2",
+          "System.Security.Cryptography.Cng": "4.5.0"
+        },
+        "runtime": {
+          "lib/net6.0/Microsoft.IdentityModel.Tokens.dll": {
+            "assemblyVersion": "6.32.2.0",
+            "fileVersion": "6.32.2.40825"
+          }
+        }
+      },
       "Microsoft.Net.Http.Headers/2.2.0": {
         "dependencies": {
           "Microsoft.Extensions.Primitives": "2.2.0",
@@ -927,6 +987,18 @@
           "System.Runtime.InteropServices": "4.3.0"
         }
       },
+      "System.IdentityModel.Tokens.Jwt/6.32.2": {
+        "dependencies": {
+          "Microsoft.IdentityModel.JsonWebTokens": "6.32.2",
+          "Microsoft.IdentityModel.Tokens": "6.32.2"
+        },
+        "runtime": {
+          "lib/net6.0/System.IdentityModel.Tokens.Jwt.dll": {
+            "assemblyVersion": "6.32.2.0",
+            "fileVersion": "6.32.2.40825"
+          }
+        }
+      },
       "System.IO/4.3.0": {
         "dependencies": {
           "Microsoft.NETCore.Platforms": "1.1.0",
@@ -1018,7 +1090,7 @@
       "System.Memory/4.5.1": {},
       "System.Memory.Data/1.0.1": {
         "dependencies": {
-          "System.Text.Json": "4.6.0"
+          "System.Text.Json": "4.7.2"
         },
         "runtime": {
           "lib/netstandard2.0/System.Memory.Data.dll": {
@@ -1222,21 +1294,7 @@
           "runtime.native.System.Security.Cryptography.OpenSsl": "4.3.0"
         }
       },
-      "System.Security.Cryptography.Cng/4.3.0": {
-        "dependencies": {
-          "Microsoft.NETCore.Platforms": "1.1.0",
-          "System.IO": "4.3.0",
-          "System.Resources.ResourceManager": "4.3.0",
-          "System.Runtime": "4.3.0",
-          "System.Runtime.Extensions": "4.3.0",
-          "System.Runtime.Handles": "4.3.0",
-          "System.Runtime.InteropServices": "4.3.0",
-          "System.Security.Cryptography.Algorithms": "4.3.0",
-          "System.Security.Cryptography.Encoding": "4.3.0",
-          "System.Security.Cryptography.Primitives": "4.3.0",
-          "System.Text.Encoding": "4.3.0"
-        }
-      },
+      "System.Security.Cryptography.Cng/4.5.0": {},
       "System.Security.Cryptography.Csp/4.3.0": {
         "dependencies": {
           "Microsoft.NETCore.Platforms": "1.1.0",
@@ -1315,7 +1373,7 @@
           "System.Runtime.InteropServices": "4.3.0",
           "System.Runtime.Numerics": "4.3.0",
           "System.Security.Cryptography.Algorithms": "4.3.0",
-          "System.Security.Cryptography.Cng": "4.3.0",
+          "System.Security.Cryptography.Cng": "4.5.0",
           "System.Security.Cryptography.Csp": "4.3.0",
           "System.Security.Cryptography.Encoding": "4.3.0",
           "System.Security.Cryptography.OpenSsl": "4.3.0",
@@ -1342,8 +1400,8 @@
           "System.Text.Encoding": "4.3.0"
         }
       },
-      "System.Text.Encodings.Web/4.5.0": {},
-      "System.Text.Json/4.6.0": {},
+      "System.Text.Encodings.Web/4.7.2": {},
+      "System.Text.Json/4.7.2": {},
       "System.Text.RegularExpressions/4.3.0": {
         "dependencies": {
           "System.Runtime": "4.3.0"
@@ -1432,6 +1490,13 @@
       "sha512": "sha512-Q/DBMkW5+AewIFwbFyU+gFZprrlfH/B8Yxlad3ISPSf4FB3sCYGE6oNiGWFliF3qt6AP77I5p/QLuUHd4d1djg==",
       "path": "alexa.net/1.22.0",
       "hashPath": "alexa.net.1.22.0.nupkg.sha512"
+    },
+    "Alexa.NET.Settings/1.1.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-4bj4srTWc86ipf0w7LE935d3OLiugantZzuAu3ad/ILD2ebWSgtQTJzdaoB+wjFIYKX7kO/SeDvlhj95py4R4w==",
+      "path": "alexa.net.settings/1.1.0",
+      "hashPath": "alexa.net.settings.1.1.0.nupkg.sha512"
     },
     "Microsoft.AspNet.WebApi.Client/5.2.8": {
       "type": "package",
@@ -1783,6 +1848,34 @@
       "path": "microsoft.extensions.primitives/2.2.0",
       "hashPath": "microsoft.extensions.primitives.2.2.0.nupkg.sha512"
     },
+    "Microsoft.IdentityModel.Abstractions/6.32.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Ul0qehKXMlq6+73l2w8/daStt8InzIzTzwt2fcMHGbe7pI5pBnwrLEwqALAxcnOkMy2wFY45kJn7QilaOdbkgw==",
+      "path": "microsoft.identitymodel.abstractions/6.32.2",
+      "hashPath": "microsoft.identitymodel.abstractions.6.32.2.nupkg.sha512"
+    },
+    "Microsoft.IdentityModel.JsonWebTokens/6.32.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-QfoQdEBDir4ShH3ub/hObgNCqoH3/5bhtyMshn6WhD/3PA7lKQyIEU5QpFUON/XeOcdYQqBmzqlgwTo27C9DgQ==",
+      "path": "microsoft.identitymodel.jsonwebtokens/6.32.2",
+      "hashPath": "microsoft.identitymodel.jsonwebtokens.6.32.2.nupkg.sha512"
+    },
+    "Microsoft.IdentityModel.Logging/6.32.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-OgXpzJVBIQNdoyYCNgFprMZGrn2aAcU08w2oqyA2RvGrYvcVWsxJsygGcrMN0vDTvCwKUlpvjqT84eEktp3Avg==",
+      "path": "microsoft.identitymodel.logging/6.32.2",
+      "hashPath": "microsoft.identitymodel.logging.6.32.2.nupkg.sha512"
+    },
+    "Microsoft.IdentityModel.Tokens/6.32.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-U4er/0UAY0AE8/Rzu9xHV1z95IqV3IbFZpqi2I4/042EBldb+s+E4lhZ3axuuioqg1mU1Ucr5Kq2EOCjf2JSgQ==",
+      "path": "microsoft.identitymodel.tokens/6.32.2",
+      "hashPath": "microsoft.identitymodel.tokens.6.32.2.nupkg.sha512"
+    },
     "Microsoft.Net.Http.Headers/2.2.0": {
       "type": "package",
       "serviceable": true,
@@ -2070,6 +2163,13 @@
       "path": "system.globalization.extensions/4.3.0",
       "hashPath": "system.globalization.extensions.4.3.0.nupkg.sha512"
     },
+    "System.IdentityModel.Tokens.Jwt/6.32.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-rChCYKLnmKLO8xFcLmOYSJh4lJXV1XkyddblRK5H3C3KDC/oYMMesU6oHd5CjvlqH1L5umtil1FQKYZG4/qDfQ==",
+      "path": "system.identitymodel.tokens.jwt/6.32.2",
+      "hashPath": "system.identitymodel.tokens.jwt.6.32.2.nupkg.sha512"
+    },
     "System.IO/4.3.0": {
       "type": "package",
       "serviceable": true,
@@ -2280,12 +2380,12 @@
       "path": "system.security.cryptography.algorithms/4.3.0",
       "hashPath": "system.security.cryptography.algorithms.4.3.0.nupkg.sha512"
     },
-    "System.Security.Cryptography.Cng/4.3.0": {
+    "System.Security.Cryptography.Cng/4.5.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-03idZOqFlsKRL4W+LuCpJ6dBYDUWReug6lZjBa3uJWnk5sPCUXckocevTaUA8iT/MFSrY/2HXkOt753xQ/cf8g==",
-      "path": "system.security.cryptography.cng/4.3.0",
-      "hashPath": "system.security.cryptography.cng.4.3.0.nupkg.sha512"
+      "sha512": "sha512-WG3r7EyjUe9CMPFSs6bty5doUqT+q9pbI80hlNzo2SkPkZ4VTuZkGWjpp77JB8+uaL4DFPRdBsAY+DX3dBK92A==",
+      "path": "system.security.cryptography.cng/4.5.0",
+      "hashPath": "system.security.cryptography.cng.4.5.0.nupkg.sha512"
     },
     "System.Security.Cryptography.Csp/4.3.0": {
       "type": "package",
@@ -2336,19 +2436,19 @@
       "path": "system.text.encoding.extensions/4.3.0",
       "hashPath": "system.text.encoding.extensions.4.3.0.nupkg.sha512"
     },
-    "System.Text.Encodings.Web/4.5.0": {
+    "System.Text.Encodings.Web/4.7.2": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-Xg4G4Indi4dqP1iuAiMSwpiWS54ZghzR644OtsRCm/m/lBMG8dUBhLVN7hLm8NNrNTR+iGbshCPTwrvxZPlm4g==",
-      "path": "system.text.encodings.web/4.5.0",
-      "hashPath": "system.text.encodings.web.4.5.0.nupkg.sha512"
+      "sha512": "sha512-iTUgB/WtrZ1sWZs84F2hwyQhiRH6QNjQv2DkwrH+WP6RoFga2Q1m3f9/Q7FG8cck8AdHitQkmkXSY8qylcDmuA==",
+      "path": "system.text.encodings.web/4.7.2",
+      "hashPath": "system.text.encodings.web.4.7.2.nupkg.sha512"
     },
-    "System.Text.Json/4.6.0": {
+    "System.Text.Json/4.7.2": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-4F8Xe+JIkVoDJ8hDAZ7HqLkjctN/6WItJIzQaifBwClC7wmoLSda/Sv2i6i1kycqDb3hWF4JCVbpAweyOKHEUA==",
-      "path": "system.text.json/4.6.0",
-      "hashPath": "system.text.json.4.6.0.nupkg.sha512"
+      "sha512": "sha512-TcMd95wcrubm9nHvJEQs70rC0H/8omiSGGpU4FQ/ZA1URIqD4pjmFJh2Mfv1yH1eHgJDWTi2hMDXwTET+zOOyg==",
+      "path": "system.text.json/4.7.2",
+      "hashPath": "system.text.json.4.7.2.nupkg.sha512"
     },
     "System.Text.RegularExpressions/4.3.0": {
       "type": "package",

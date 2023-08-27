@@ -1,11 +1,9 @@
 ﻿using System;
 using Alexa.NET;
-using Alexa.NET.Request;
 using Alexa.NET.Request.Type;
 using Alexa.NET.Response;
-using System.Threading.Tasks;
 
-namespace AbrirMedicoes.Requests
+namespace AbrirMedicoes.Commands.Requests
 {
     public class Launch
     {
@@ -14,7 +12,6 @@ namespace AbrirMedicoes.Requests
             if (requestType == typeof(LaunchRequest))
             {
                 response = ResponseBuilder.Tell("Bem vindo ao inventário Inflor");
-                response.Response.ShouldEndSession = false;
             }
 
 
